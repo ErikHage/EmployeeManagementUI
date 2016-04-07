@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="../js/ang/employeeApp.js"></script>
+    <script src="../js/ang/employeeController.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Employee Input Form</title>
+</head>
+<body data-ng-app="employeeManagementApp">
+    <div class="container-fluid" data-ng-controller="employeeController">
+        <div class="jumbotron-fluid">
+            <h1> Employee Input Form </h1>
+            <h5> Please fill out the below information </h5>
+        </div>
+
+        <div class="">
+            <a href="index.html">Home</a>
+            <a href="inputForm.html">Add</a>
+        </div>
+
+        <div id="inputForm">
+            <form name="addEmployeeForm">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <fieldset>
+                            <legend>Employee Details</legend>
+                            <!--
+                            <label for="employeeId">Employee Id</label><br>
+                            <input id="employeeId" name="employeeId" data-ng-model="newEmployee.employeeId" readonly><br>
+                            <label for="recordVersion">Version</label><br>
+                            <input id="recordVersion" name="recordVersion" data-ng-model="newEmployee.recordVersion" readonly><br>
+                            -->
+                            <label for="firstName">First Name</label><br>
+                            <input id="firstName" name="firstName" data-ng-model="newEmployee.firstName" required><br>
+                            <label for="lastName">Last Name</label><br>
+                            <input id="lastName" name="lastName" data-ng-model="newEmployee.lastName" required><br>
+                            <label for="phone">Phone</label><br>
+                            <input id="phone" name="phone" data-ng-model="newEmployee.phone" tel required><br>
+                            <label for="email">Email</label><br>
+                            <input id="email" name="email" data-ng-model="newEmployee.email" email required><br>
+                            <label for="birthDate">Birth Date</label><br>
+                            <input id="birthDate" name="birthDate" type="date"
+                                   data-ng-model="newEmployee.birthDate" required><br>
+                        </fieldset>
+                    </div>
+                    <div class="col-sm-4">
+                        <fieldset>
+                            <legend>Address</legend>
+                            <label for="street">Street</label><br>
+                            <input id="street" name="street" data-ng-model="newEmployee.address.street" required><br>
+                            <label for="city">City</label><br>
+                            <input id="city" name="city" data-ng-model="newEmployee.address.city" required><br>
+                            <label for="state">State</label><br>
+                            <input id="state" name="state" data-ng-model="newEmployee.address.state"><br>
+                            <label for="zipCode">Zip Code</label><br>
+                            <input id="zipCode" name="zipCode" data-ng-model="newEmployee.address.zipCode"><br>
+                            <label for="country">Country</label><br>
+                            <input id="country" name="country" data-ng-model="newEmployee.address.country" required><br>
+                        </fieldset>
+                    </div>
+                    <div class="col-sm-4">
+                        <fieldset>
+                            <legend>Position Details</legend>
+                            <label for="title">Title</label><br>
+                            <input id="title" name="title" data-ng-model="newEmployee.title" required><br>
+                            <label for="wage">Wage</label><br>
+                            <input id="wage" name="wage" min="0" step="0.01" type="number"
+                                   data-ng-model="newEmployee.wage" required><br>
+                            <label for="startDate">Start Date</label><br>
+                            <input id="startDate" name="startDate" type="date"
+                                   data-ng-model="newEmployee.startDate" required><br>
+                            <label for="isActive">Active</label>
+                            <input id="isActive" name="isActive" type="checkbox"
+                                   data-ng-model="newEmployee.isActive" required><br>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn-primary" id="saveButton" data-ng-disabled="addEmployeeForm.name.$invalid"
+                        data-ng-click="save()">Save</button>
+                    <button class="btn-secondary" id="clearButton" data-ng-click="clearInputForm()">Clear</button>
+                </div>
+            </form>
+        </div>
+        <div class="blockquote">
+            {{newEmployee}}
+        </div>
+    </div>
+</body>
+</html>

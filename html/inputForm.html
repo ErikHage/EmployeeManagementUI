@@ -12,131 +12,131 @@
     <title>Employee Input Form</title>
 </head>
 <body data-ng-app="employeeManagementApp">
-    <div id="container" class="container-fluid" data-ng-controller="employeeController">
+<div id="container" class="container-fluid" data-ng-controller="employeeController">
 
-        <div class="jumbotron-fluid">
-            <h1> Employee Input Form </h1>
-            <h5> Please fill out the below information </h5>
-        </div>
-        <hr>
+    <div class="jumbotron-fluid">
+        <h1> Employee Input Form </h1>
+        <h5> Please fill out the below information </h5>
+    </div>
+    <hr>
 
-        <ul class="nav nav-pills nav-justified">
-            <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li class="active"><a href="inputForm.html"><span class="glyphicon glyphicon-plus"></span> Add</a></li>
-            <li><a href="employeeSearch.html"><span class="glyphicon glyphicon-search"></span> Search</a></li>
-        </ul>
-        <hr>
+    <ul class="nav nav-pills nav-justified">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li class="active"><a href="inputForm.html"><span class="glyphicon glyphicon-plus"></span> Add</a></li>
+        <li><a href="employeeSearch.html"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+    </ul>
+    <hr>
 
-        <div id="inputForm">
-            <form role="form" name="addEmployeeForm">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h4>Personal Details</h4>
-                        <div class="form-group">
-                            <label for="firstName">First Name:</label>
-                            <input type="text" class="form-control" id="firstName"
-                                   data-ng-model="newEmployee.firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name:</label>
-                            <input type="text" class="form-control" id="lastName"
-                                   data-ng-model="newEmployee.lastName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone:</label>
-                            <input type="tel" class="form-control" id="phone"
-                                   data-ng-model="newEmployee.phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address:</label>
-                            <input type="email" class="form-control" id="email"
-                                   data-ng-model="newEmployee.email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="birthDate">Birth Date:</label>
-                            <input type="date" class="form-control" id="birthDate"
-                                   data-ng-model="newEmployee.birthDate" required>
-                        </div>
+    <div id="inputForm">
+        <form role="form" name="addEmployeeForm">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>Personal Details</h4>
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" class="form-control" id="firstName"
+                               data-ng-model="newEmployee.firstName" required>
                     </div>
-                    <div class="col-sm-4">
-                        <h4>Address</h4>
-                        <div class="form-group">
-                            <label for="street">Street:</label>
-                            <input type="text" class="form-control" id="street"
-                                   data-ng-model="newEmployee.address.street" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="city">City:</label>
-                            <input type="text" class="form-control" id="city"
-                                   data-ng-model="newEmployee.address.city" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="state">State:</label>
-                            <input type="text" class="form-control" id="state"
-                                   data-ng-model="newEmployee.address.state">
-                        </div>
-                        <div class="form-group">
-                            <label for="zipCode">Zip Code:</label>
-                            <input type="text" class="form-control" id="zipCode"
-                                   data-ng-model="newEmployee.address.zipCode">
-                        </div>
-                        <div class="form-group">
-                            <label for="country">Country:</label>
-                            <input type="text" class="form-control" id="country"
-                                   data-ng-model="newEmployee.address.country" required>
-                        </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" class="form-control" id="lastName"
+                               data-ng-model="newEmployee.lastName" required>
                     </div>
-                    <div class="col-sm-4">
-                        <h4>Position Details</h4>
-                        <div class="form-group">
-                            <label for="title">Title:</label>
-                            <input type="text" class="form-control" id="title"
-                                   data-ng-model="newEmployee.title">
-                        </div>
-                        <div class="form-group">
-                            <label for="wage">Wage ($):</label>
-                            <input type="number" class="form-control" id="wage" min="0" step="0.01"
-                                   data-ng-model="newEmployee.wage" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="startDate">Start Date:</label>
-                            <input type="date" class="form-control" id="startDate"
-                                   data-ng-model="newEmployee.startDate" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="isActive">Is Active
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" class="form-control" id="phone"
+                               data-ng-model="newEmployee.phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" class="form-control" id="email"
+                               data-ng-model="newEmployee.email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate">Birth Date:</label>
+                        <input type="date" class="form-control" id="birthDate"
+                               data-ng-model="newEmployee.birthDate" required>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Address</h4>
+                    <div class="form-group">
+                        <label for="street">Street:</label>
+                        <input type="text" class="form-control" id="street"
+                               data-ng-model="newEmployee.address.street" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" class="form-control" id="city"
+                               data-ng-model="newEmployee.address.city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State:</label>
+                        <input type="text" class="form-control" id="state"
+                               data-ng-model="newEmployee.address.state">
+                    </div>
+                    <div class="form-group">
+                        <label for="zipCode">Zip Code:</label>
+                        <input type="text" class="form-control" id="zipCode"
+                               data-ng-model="newEmployee.address.zipCode">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <input type="text" class="form-control" id="country"
+                               data-ng-model="newEmployee.address.country" required>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Position Details</h4>
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="form-control" id="title"
+                               data-ng-model="newEmployee.title">
+                    </div>
+                    <div class="form-group">
+                        <label for="wage">Wage ($):</label>
+                        <input type="number" class="form-control" id="wage" min="0" step="0.01"
+                               data-ng-model="newEmployee.wage" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" class="form-control" id="startDate"
+                               data-ng-model="newEmployee.startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="isActive">Is Active
                             <input type="checkbox" class="form-control" id="isActive"
                                    data-ng-model="newEmployee.isActive">
-                            </label>
-                        </div>
+                        </label>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-3">
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
 
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="btn-group btn-group-justified">
-                            <a href="#" class="btn btn-primary" data-ng-click="save()"
-                               data-ng-disabled="addEmployeeForm.name.$invalid">
-                                <span class="glyphicon glyphicon-floppy-disk"></span> Save
-                            </a>
-                            <a href="#" class="btn btn-warning" data-ng-click="clearInputForm()">
-                                <span class="glyphicon glyphicon-remove"></span> Clear
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-
+                </div>
+                <div class="col-sm-6">
+                    <div class="btn-group btn-group-justified">
+                        <a href="#" class="btn btn-primary" data-ng-click="save()"
+                           data-ng-disabled="addEmployeeForm.name.$invalid">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> Save
+                        </a>
+                        <a href="#" class="btn btn-warning" data-ng-click="clearInputForm()">
+                            <span class="glyphicon glyphicon-remove"></span> Clear
+                        </a>
                     </div>
                 </div>
-            </form>
-        </div>
+                <div class="col-sm-3">
 
-        <hr>
-        <div class="blockquote">
-            {{newEmployee}}
-        </div>
+                </div>
+            </div>
+        </form>
     </div>
+
+    <hr>
+    <div class="blockquote">
+        {{newEmployee}}
+    </div>
+</div>
 </body>
 </html>
